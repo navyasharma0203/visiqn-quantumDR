@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>VISIQN : Quantum-enhanced Visual Intelligence for
+            Optimized Diabetic Retinopathy Management</title>
+    </head>
+
+    <style>
+        .card {
+          border-radius: 10px;
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+          width: 600px;
+          height: 260px;
+          background-color: #bdd3f1;
+          padding: 10px 30px 40px;
+        }
+        
+        .card h3 {
+          font-size: 22px;
+          font-weight: 600;
+          
+        }
+        
+        .drop_box {
+          margin: 10px 0;
+          padding: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          border: 3px dotted #a3a3a3;
+          border-radius: 5px;
+        }
+        
+        .drop_box h4 {
+          font-size: 16px;
+          font-weight: 400;
+          color: #2e2e2e;
+        }
+        
+        .drop_box p {
+          margin-top: 10px;
+          margin-bottom: 20px;
+          font-size: 12px;
+          color: #a3a3a3;
+        }
+        
+        .btn {
+          text-decoration: none;
+          background-color: #f0007c;
+          color: #ffffff;
+          padding: 10px 20px;
+          border: none;
+          outline: none;
+          transition: 0.3s;
+        }
+        
+        .btn:hover{
+          text-decoration: none;
+          background-color: #ffffff;
+          color: #005af0;
+          padding: 10px 20px;
+          border: none;
+          outline: 1px solid #010101;
+        }
+        .form input {
+          margin: 10px 0;
+          width: 100%;
+          background-color: #e2e2e2;
+          border: none;
+          outline: none;
+          padding: 12px 20px;
+          border-radius: 4px;
+        }
+
+
+    </style>
+
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <!-- <a href="#" class="nav__logo">
+                    <i class="ri-leaf-line nav__logo-icon"></i> Plantex
+                </a> -->
+                <nav class="nav container">
+                    <a href="#" class="nav__logo">
+                        <img src="assets/img/favicon.png" class="nav__logo-icon"  height = "70px" width="70px">
+                        Visiqn
+                    </a>
+                </nav>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <!-- <img src="assets/img/home.gif" alt="" class="home__img"> -->
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Welcome!
+                        </h1>
+                        <p class="home__description">
+                            Kindly upload the required files
+                        </p>
+                        <a href="#about" class="button button--flex">
+                            Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="card">
+                          <h3>Upload Files</h3>
+                          <div class="drop_box">
+                            <form action="/upload" method="post" enctype="multipart/form-data">
+                            <header>
+                              <h4>Select File here</h4>
+                            </header>
+                            <p>Files Supported: PDF, PNG, JPG , JPEG</p>
+                            <input type="file" hidden accept=".pdf,.png,.jpg,.jpeg" id="fileID" style="display:none;">
+                            <button class="btn">Choose File</button>
+                            </form>
+                          </div>
+                      
+                        </div>
+                      </div>
+
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+    <!-- Add this div to display the classification result -->
+    <div id="classification-result" class="classification-result"></div>
+
+    <section class="steps section container">
+        <div class="steps__bg">
+            <h2 class="section__title-center steps__title">
+                We endeavour <br> to provide best solutions
+            </h2>
+
+            <div class="steps__container grid">
+                <!-- Display classification result here -->
+                <div class="steps__card">
+                    <div class="steps__card-number">01</div>
+                    <h3 class="steps__card-title">Diabetic Retinopathy Grade</h3>
+                    <p class="steps__card-description" id="grade">Moderate</p>
+                </div>
+
+                <div class="steps__card">
+                    <div class="steps__card-number">02</div>
+                    <h3 class="steps__card-title">Confidence Score</h3>
+                    <p class="steps__card-description" id="confidence">85%</p>
+                </div>
+
+                <div class="steps__card">
+                    <div class="steps__card-number">03</div>
+                    <h3 class="steps__card-title">Visual Explanation</h3>
+                    <canvas id="heatmap"></canvas> <!-- Add your visual explanation heatmap here -->
+                </div>
+
+                <div class="steps__card">
+                    <div class="steps__card-number">04</div>
+                    <h3 class="steps__card-title">Recommendation</h3>
+                    <p class="steps__card-description" id="recommendation">Consult a specialist</p>
+                </div>
+
+                <div class="steps__card">
+                    <div class="steps__card-number">05</div>
+                    <h3 class="steps__card-title">Find Nearby Specialist</h3>
+                    <button class="button button--flex" id="findSpecialistBtn">
+                        Find Specialist
+                        <i class="ri-arrow-right-line button__icon"></i>
+                    </button>
+                </div>
+
+                <div class="steps__card">
+                    <div class="steps__card-number">06</div>
+                    <h3 class="steps__card-title">Download PDF Report</h3>
+                    <button class="button button--flex" id="downloadPdfBtn">
+                        Download PDF
+                        <i class="ri-download-2-line button__icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ... (your footer and other sections remain unchanged) ... -->
+
+    <script>
+        // Get the classification result from the Flask template
+        const classificationResult = {{ result | tojson | safe }};
+
+        // Display the classification result on the page
+        document.getElementById('grade').textContent = classificationResult.grade;
+        document.getElementById('confidence').textContent = classificationResult.confidence + '%';
+        
+        // Set recommendation based on confidence score
+        const recommendation = classificationResult.confidence >= 80 ? 'Consult a specialist' : 'Monitor regularly';
+        document.getElementById('recommendation').textContent = recommendation;
+
+        // Create heatmap using Chart.js (replace with actual heatmap data)
+        const ctx = document.getElementById('heatmap').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: classificationResult.heatmapData, // Replace with your actual heatmap data
+            options: {
+                responsive: true,
+                legend: { display: false },
+                scales: {
+                    yAxes: [{
+                        ticks: { beginAtZero: true },
+                    }],
+                },
+            },
+        });
+
+        // Add click event listeners for buttons
+        const findSpecialistBtn = document.getElementById('findSpecialistBtn');
+        findSpecialistBtn.addEventListener('click', () => {
+            // Code to handle finding nearby specialists
+            // Add markers on map, etc.
+            const contactUsSection = document.getElementById('contact');
+            contactUsSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+        downloadPdfBtn.addEventListener('click', () => {
+            // Code to generate and download PDF report
+            // Add content to the PDF (e.g., classification result, recommendations)
+            // Save the PDF with the specified filename
+        });
+    </script>
+
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Some common questions <br> were often asked
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What is diabetic retinopathy, and why is early detection important?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Diabetic retinopathy is a diabetes-related eye disease that damages blood 
+                                    vessels in the retina, potentially leading to blindness. Early detection is 
+                                    crucial because timely intervention can prevent vision loss and improve outcomes
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How does the quantum-accelerated classification algorithm work?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    The quantum-accelerated classification algorithm utilizes the power of 
+                                    quantum computing to enhance the accuracy of diabetic retinopathy detection. 
+                                    It processes fundus images and employs quantum techniques to optimize complex 
+                                    computations, resulting in more accurate disease grade classification.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Can I upload fundus images taken with any device?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Yes, the application supports uploading fundus images captured using 
+                                    different devices. However, for optimal accuracy, it's recommended to 
+                                    upload high-quality images taken with specialized retinal imaging equipment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Can patients access their own medical records through the application?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Yes, patients can securely access their medical records, view their fundus images, 
+                                    and understand their disease grade classifications. The application empowers patients 
+                                    with valuable information about their diabetic retinopathy status.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How can medical professionals benefit from this application?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Medical professionals can efficiently manage patient medical records, 
+                                    perform accurate diabetic retinopathy assessments, and receive timely 
+                                    insights for diagnosis and treatment planning. The application streamlines 
+                                    the process and enhances decision-making.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Are the classification results from the algorithm reliable?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Yes, the classification results are reliable and validated based on a robust set 
+                                    of performance metrics, including accuracy, precision, recall, specificity, and F1-score. 
+                                    The quantum-accelerated algorithm consistently achieves high accuracy levels.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Reach out to us today <br> via any of the given <br> information
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Call us for instant support</h3>
+                                <span class="contact__description">
+                                    <i class="ri-phone-line contact__icon"></i>
+                                    +999 888 777
+                                </span>
+                            </div>
+
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Write us by mail</h3>
+                                <span class="contact__description">
+                                    <i class="ri-mail-line contact__icon"></i>
+                                    vitchennai@gmail.com
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <div class="contact__content">
+                                <input type="email" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Email</label>
+                            </div>
+
+                            <div class="contact__content">
+                                <input type="text" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Subject</label>
+                            </div>
+
+                            <div class="contact__content contact__area">
+                                <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
+                                <label for="" class="contact__label">Message</label>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex">
+                            Send Message
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <img src="assets/img/favicon.png" class="nav__logo-icon"  height = "70px" width="70px">
+                        Visiqn
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our newsletter <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        <input type="email" placeholder="Enter your email" class="footer__input">
+
+                        <button class="button button--flex footer__button">
+                            Subscribe
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Vellore Institute of Technology</li>
+                        <li class="footer__information">Chennai, Tamil Nadu</li>
+                        <li class="footer__information">123-456-789</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">+999 888 777</li>
+                        
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        We accept all credit cards
+                    </h3>
+
+                    <div class="footer__cards">
+                        <img src="assets/img/card1.png" alt="" class="footer__card">
+                        <img src="assets/img/card2.png" alt="" class="footer__card">
+                        <img src="assets/img/card3.png" alt="" class="footer__card">
+                        <img src="assets/img/card4.png" alt="" class="footer__card">
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Visiqn. All rigths reserved</p>
+        </footer>
+        
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
